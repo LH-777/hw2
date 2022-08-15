@@ -1,0 +1,364 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.wrap {
+  margin: 0 auto;
+  /*margin-left: auto;
+    margin-right: auto;*/
+  width: 1002px;
+  font-family: "Microsoft JhengHei Regular";
+}
+.header {
+  margin-bottom: 30px;
+}
+.social_media {
+  background: #f6f6f6;
+  height: 30px;
+}
+.social_media ul {
+  display: flex;
+  justify-content: flex-end;
+}
+.social_media ul li {
+  margin: 5px;
+  padding-right: 8px;
+}
+.social_media a {
+  text-decoration: none;
+}
+.social_media img {
+  vertical-align: bottom; /*使icon與文字對齊*/
+}
+.facebook {
+  border-right: 1px solid #cccccc;
+  opacity: 1;
+}
+.facebook span {
+  color: #3b5998;
+}
+.facebook:hover {
+  opacity: 0.5;
+}
+.twitter {
+  opacity: 1;
+}
+.twitter span {
+  color: #00acee;
+}
+.twitter:hover {
+  opacity: 0.5;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  margin-bottom: 2px;
+}
+.menu h1 a {
+  width: 224px;
+  height: 50px;
+  background-image: url("https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/logo.png");
+  display: block;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.menu ul {
+  display: flex;
+  justify-content: flex-end;
+}
+.menu li a {
+  display: block;
+  box-sizing: border-box;
+  height: 50px;
+  line-height: 50px; /*文字置中*/
+  font-weight: 700;
+  padding: 0 8px;
+  margin-right: 25px;
+  color: #00cb9b;
+  text-decoration: none;
+}
+.menu ul a:hover {
+  border-bottom: 4px solid #00cb9b;
+}
+.menu li {
+  position: relative;
+}
+.menu li ul {
+  display: none;
+  background: #fff;
+  position: absolute;
+  z-index: 10;
+  border-radius: 0px 0px 5px 5px;
+}
+.menu .dropdown-open a {
+  margin-right: 0;
+  text-align: center;
+  background: #00cb9b;
+  color: #fff;
+  border: none;
+}
+.menu .dropdown-open a:hover{
+  background: #00654a;
+  border: none;
+}
+.dropdown:hover,
+.menu a.active {
+  border-radius: 5px 5px 0px 0px;
+  background: #00cb9b;
+  color: #fff;
+}
+
+.swiper { /* 修改箭頭顏色及大小 */
+  --swiper-navigation-color: #fff;
+  --swiper-navigation-size: 20px;
+}
+.swiper-wrapper {
+  position: relative;
+  width: 1002px;
+  height: 346px;
+  display: flex;
+}
+.slogan1 {
+  background-image: url("https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/banner.png");
+  background-repeat: no-repeat;
+}
+.slogan2 {
+  background-image: url("https://miro.medium.com/max/1200/1*LeYBjLHr6kmYIoSx-aHdDA.png");
+  background-repeat: no-repeat;
+  background-size: cover;     /* 背景滿版以圖片中心點做縮放 */
+  background-position: center;
+}
+.slogan3 {
+  background-image: url("https://www.hexschool.com/images/events/banner_20161031.png");
+  background-repeat: no-repeat;
+  background-size: cover;     /* 背景滿版 */
+  position: relative;
+}
+.slogan3 span { /*蓋住原始圖片文字*/
+  display: block;
+  width: 450px;
+  height: 200px;
+  background: #33d6ad;
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+  z-index: 9;
+}
+.swiper-wrapper h2 {
+  position: absolute;
+  bottom: 95px;
+  display: block;
+  height: 80px;
+  width: 977px; /*1002-25(padding-left)*/
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 25px;
+  font-size: 35px;
+  line-height: 1.2;
+  color: #fff;
+  background: rgba(9, 9, 9, 0.5);
+  z-index: 10;
+}
+
+.content {
+  width: 1002px;
+  margin-bottom: 20px;
+}
+.course {
+  display: flex;
+  justify-content: space-around;
+  padding: 58px 0;
+}
+.item {
+  width: 300px;
+  height: 330px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid rgb(240, 235, 235);
+  border-left: 1px solid rgb(240, 235, 235);
+  border-right: 1px solid rgb(240, 235, 235);
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 6px 3px #f0f0f0;
+}
+.item h2 {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  padding: 10px 0;
+}
+.item p {
+  text-align: justify; /*文字兩端對齊*/
+  line-height: 20px;
+  font-size: 15px;
+  padding: 0 22px;
+}
+.item ul {
+  padding: 0 22px;
+  font-size: 15px;
+  line-height: 20px;
+  list-style-type: none;
+}
+
+.comparison h2 {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.price {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: left;
+  margin-bottom: 58px;
+}
+.price tr {
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+}
+.price tr:hover {
+  background-color: #a8e6d151;
+}
+.price tr th {
+  font-weight: bold;
+  background-color: #f7f7f7;
+  padding: 8px 110px 8px 22px;
+}
+.price tr td {
+  padding: 8px 110px 8px 22px;
+}
+.price tr span {
+  color: #00cb9b;
+}
+
+.footer {
+  width: 1002px;
+}
+.enroll {
+  width: 1002px;
+  height: 400px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  background: linear-gradient(#00654a, #009972);
+}
+.enroll .detail {
+  padding: 30px 20px;
+  color: #fff;
+}
+.enroll .detail h2 {
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+}
+.enroll .detail .info {
+  display: flex;
+  align-items: flex-start;
+  border-radius: 10px;
+  margin-top: 30px;
+  position: relative;
+}
+.detail .info textarea {
+  width: 100%;
+  height: 250px;
+  border-radius: 3px;
+}
+.detail .info .user {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: none;
+  border-radius: 3px;
+  margin-left: 30px;
+}
+.user .user_item p {
+  line-height: 30px;
+}
+.user .user_item input {
+  height: 30px;
+  width: 100%;
+}
+.user .button input {
+  padding: 10px 20px;
+  background-color: #00cb9b;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.user .button input:hover {
+  background-color: #00654a;
+  cursor: pointer;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.contact img {
+  height: 36px;
+  width: 171px;
+}
+.contact_item p {
+  font-size: 14px;
+  line-height: 22px;
+}
+.contact_item span {
+  color: #e32d72;
+}
+
+.top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 11;
+}
+.top img {
+  width: 35px;
+}
+.top img:hover{
+  opacity: 0.5;
+}
